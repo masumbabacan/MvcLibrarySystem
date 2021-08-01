@@ -1,0 +1,21 @@
+﻿@model Entities.Concrete.Writer
+@{
+    ViewBag.Title = "WriterBring";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("WriterUpdate", "Writer", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Yazar Id</label>
+        @Html.TextBoxFor(c => c.WriterId, new { @class = "form-control" })
+        <br />
+        <label>Yazar Adı</label>
+        @Html.TextBoxFor(c => c.FirstName, new { @class = "form-control" })
+        <br />
+        <label>Yazar Soyadı</label>
+        @Html.TextBoxFor(c => c.LastName, new { @class = "form-control" })
+    </div>
+    <div><button class="btn btn-warning">Güncelle</button></div>
+}
+

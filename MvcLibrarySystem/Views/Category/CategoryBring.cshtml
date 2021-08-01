@@ -1,0 +1,19 @@
+﻿@model Entities.Concrete.Category
+@{
+    ViewBag.Title = "CategoryBring";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.CategoryId)
+        @Html.TextBoxFor(c => c.CategoryId, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(c => c.CategoryName)
+        @Html.TextBoxFor(c => c.CategoryName, new { @class = "form-control" })
+        <br />
+    </div>
+    <div><button class="btn btn-warning">Güncelle</button></div>
+}
+
