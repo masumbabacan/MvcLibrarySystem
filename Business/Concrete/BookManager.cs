@@ -20,6 +20,7 @@ namespace Business.Concrete
 
         public void Add(Book book)
         {
+            book.Status = true;
             _bookDal.Add(book);
         }
 
