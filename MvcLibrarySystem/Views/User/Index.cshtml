@@ -1,5 +1,7 @@
 ﻿@using Entities.Concrete
-@model List<User>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<User>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
@@ -14,6 +16,7 @@
             width: 100%;
             height: auto;
         }
+
 
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -54,6 +57,7 @@
     </style>
 </head>
 <body>
+
     @foreach (var item in Model)
     {
         <div class="external">
@@ -72,8 +76,12 @@
                 <a href="/User/UserDelete/@item.UserId"><button style="background-color:darkred">Sil</button></a>
                 <a href="/User/UserBring/@item.UserId"><button>Güncelle</button></a>
             </div>
+
         </div>
     }
+    <div style="padding-top:660px">
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+    </div>
 </body>
 </html>
 
