@@ -25,6 +25,7 @@ namespace Entities.Concrete
         public string Image { get; set; }
         [StringLength(50)]
         public string School { get; set; }
+        public string LinkedIn { get; set; }
 
 
         public ICollection<Movement> Movements { get; set; }

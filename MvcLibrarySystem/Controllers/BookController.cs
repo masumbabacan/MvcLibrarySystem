@@ -16,10 +16,16 @@ namespace MvcLibrarySystem.Controllers
         BookManager bookManager = new BookManager(new EfBookDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
-        public ActionResult Index()
+        public ActionResult Index(string p)
         {
-            var books = bookManager.GetAll();
-            return View(books);
+            
+            var books = from x in bookManager.GetAll() select x;
+            if (!string.IsNullOrEmpty(p))
+            {
+                
+                books = books.Where(x => x.BookName.Contains(p.ToUpper()));
+            }
+            return View(books.ToList());
         }
 
         [HttpGet]

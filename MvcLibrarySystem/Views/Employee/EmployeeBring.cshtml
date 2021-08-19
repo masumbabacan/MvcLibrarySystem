@@ -1,0 +1,23 @@
+﻿@model Entities.Concrete.Employee
+@{
+    ViewBag.Title = "EmployeeBring";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("EmployeeUpdate", "Employee", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Çalışan Id</label>
+        @Html.TextBoxFor(c => c.EmployeeId, new { @class = "form-control" })
+        <br />
+        <label>Çalışan Adı</label>
+        @Html.TextBoxFor(c => c.FirstName, new { @class = "form-control" })
+        <br />
+        <label>Çalışan Soyadı</label>
+        @Html.TextBoxFor(c => c.LastName, new { @class = "form-control" })
+    </div>
+    <div><button class="btn btn-warning">Güncelle</button></div>
+}
+
+
+

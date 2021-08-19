@@ -1,0 +1,21 @@
+﻿@model Entities.Concrete.Employee
+@{
+    ViewBag.Title = "EmployeeAdd";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<h2>Çalışan Ekleme</h2>
+<form class="form-group" method="post">
+    <div>
+        <label>Personel Adı</label>
+        <input type="text" class="form-control" name="FirstName" />
+    </div>
+    <div>
+        <label>Personel Soyadı</label>
+        <input type="text" class="form-control" name="LastName" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="EmployeeAdd">Personel Ekle</button>
+    </div>
+</form>
