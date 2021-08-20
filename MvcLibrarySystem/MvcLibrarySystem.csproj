@@ -137,6 +137,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OnLoanController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
@@ -195,6 +196,10 @@
     <Content Include="Views\Employee\EmployeeAdd.cshtml" />
     <Content Include="Views\Employee\EmployeeBring.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\UserBring.cshtml" />
+    <Content Include="Views\OnLoan\Lend.cshtml" />
+    <Content Include="Views\OnLoan\BookReturnList.cshtml" />
+    <Content Include="Views\OnLoan\BookReturnProcess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,7 +250,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53818</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44357/</IISUrl>
+          <IISUrl>https://localhost:44395/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>https://localhost:44395/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

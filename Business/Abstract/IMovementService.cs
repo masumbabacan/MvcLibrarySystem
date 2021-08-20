@@ -10,6 +10,8 @@ namespace Business.Abstract
     {
         List<Movement> GetAll();
 
+        List<Movement> GetAllProcessFalse();
+
         Movement GetById(int id);
 
         void Add(Movement movement);

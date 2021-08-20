@@ -16,6 +16,8 @@ namespace Entities.Concrete
        // public int EmployeeId { get; set; }
         public DateTime DateOfIssue { get; set; }
         public DateTime ReturnDate { get; set; }
+        public DateTime UserReturnDate { get; set; }
+        public bool ProcessStatus { get; set; }
 
 
         public int BookId { get; set; }

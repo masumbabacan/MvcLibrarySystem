@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete;
+using Entities.Concrete;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace MvcLibrarySystem.Controllers
         UserManager userManager = new UserManager(new EfUserDal());
         public ActionResult Index(int page = 1)
         {
-            var result = userManager.GetAll().ToPagedList(page,6);
+            var result = userManager.GetAll().ToPagedList(page,4);
             return View(result);
         }
 
@@ -23,6 +24,18 @@ namespace MvcLibrarySystem.Controllers
         {
             var values = userManager.GetById(id);
             userManager.Delete(values);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult UserBring(int id)
+        {
+            var values = userManager.GetById(id);
+            return View("UserBring", values);
+        }
+
+        public ActionResult UserUpdate(User user)
+        {
+            userManager.Update(user);
             return RedirectToAction("Index");
         }
     }

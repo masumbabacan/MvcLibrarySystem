@@ -1,0 +1,34 @@
+﻿@model Entities.Concrete.Movement
+@{
+    ViewBag.Title = "Lend";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px;">
+        <label>Uye Id</label>
+        @Html.TextBoxFor(x => x.UserId, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Kitap Id</label>
+        @Html.TextBoxFor(x => x.BookId, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Çalışan Id</label>
+        @Html.TextBoxFor(x => x.EmployeeId, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <label>Veriliş Tarihi</label>
+        <input type="text" class="form-control" name="DateOfIssue" value="@DateTime.Now.ToShortDateString()" />
+    </div>
+    <div style="margin-top:15px;">
+        <label>Dönüş Tarihi</label>
+        <input type="text" class="form-control" name="ReturnDate" value="@DateTime.Now.AddDays(7).ToShortDateString()" />
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-info">Ödünç ver</button>
+    </div>
+</form>
+
+

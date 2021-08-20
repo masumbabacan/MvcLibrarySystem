@@ -1,0 +1,33 @@
+﻿@model Entities.Concrete.Movement
+@{
+    ViewBag.Title = "BookReturnProcess";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("BookReturnUpdate", "OnLoan", FormMethod.Post))
+{
+<div class="form-group">
+    <label>Hareket Id</label>
+    @Html.TextBoxFor(c => c.MovementId, new { @class = "form-control" })
+    <br />
+    <label>Çalışan Id</label>
+    @Html.TextBoxFor(c => c.EmployeeId, new { @class = "form-control" })
+    <br />
+    <label>Kitap Id</label>
+    @Html.TextBoxFor(c => c.BookId, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Adı</label>
+    @Html.TextBoxFor(c => c.UserId, new { @class = "form-control" })
+    <br />
+    <label>Alış tarihi</label>
+    @Html.TextBoxFor(c => c.DateOfIssue, new { @class = "form-control" })
+    <br />
+    <label>Verilmesi gereken tarih</label>
+    @Html.TextBoxFor(c => c.ReturnDate, new { @class = "form-control" })
+    <br />
+    <label>Üyenin verdiği tarih</label>
+    <input type="text" class="form-control" name="UserReturnDate" value="@DateTime.Now.ToShortDateString()" />
+</div>
+    <div><button class="btn btn-warning">Ödünç Kitabı Al</button></div>
+}
+

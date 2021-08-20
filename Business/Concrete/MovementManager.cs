@@ -33,6 +33,11 @@ namespace Business.Concrete
             return _movementDal.GetAll();
         }
 
+        public List<Movement> GetAllProcessFalse()
+        {
+            return _movementDal.List(x=>x.ProcessStatus == false);
+        }
+
         public Movement GetById(int id)
         {
             return _movementDal.Get(x => x.MovementId == id);

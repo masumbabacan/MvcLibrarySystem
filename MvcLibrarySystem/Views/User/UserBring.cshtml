@@ -1,0 +1,35 @@
+﻿@model Entities.Concrete.User
+@{
+    ViewBag.Title = "UserBring";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UserUpdate", "User", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(c => c.UserId, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Adı</label>
+    @Html.TextBoxFor(c => c.FirstName, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Soyadı</label>
+    @Html.TextBoxFor(c => c.LastName, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Email</label>
+    @Html.TextBoxFor(c => c.Email, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı İletişim</label>
+    @Html.TextBoxFor(c => c.PhoneNumber, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Resim</label>
+    @Html.TextBoxFor(c => c.Image, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Okul</label>
+    @Html.TextBoxFor(c => c.School, new { @class = "form-control" })
+    <br />
+    <label>Kullanıcı Linkedin</label>
+    @Html.TextBoxFor(c => c.LinkedIn, new { @class = "form-control" })
+</div>
+    <div><button class="btn btn-warning">Güncelle</button></div>
+}
+
