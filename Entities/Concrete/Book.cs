@@ -23,6 +23,8 @@ namespace Entities.Concrete
         [StringLength(50)]
         public string NumberPage { get; set; }
         public bool Status { get; set; }
+        [StringLength(500)]
+        public string BookImage { get; set; }
 
 
         public int CategoryId { get; set; }

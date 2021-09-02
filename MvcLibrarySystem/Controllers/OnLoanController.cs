@@ -12,6 +12,8 @@ namespace MvcLibrarySystem.Controllers
     public class OnLoanController : Controller
     {
         MovementManager movementManager = new MovementManager(new EfMovementDal());
+        BookManager bookManager = new BookManager(new EfBookDal());
+        EfBookDal efBookDal = new EfBookDal();
         // GET: OnLoan
        
         [HttpGet]
@@ -23,9 +25,16 @@ namespace MvcLibrarySystem.Controllers
         [HttpPost]
         public ActionResult Lend(Movement movement)
         {
-            
-            movementManager.Add(movement);
-            return RedirectToAction("Lend");
+            var result =efBookDal.Get(x => x.BookId == movement.BookId);
+            if (result.Status == true)
+            {
+                movementManager.Add(movement);
+                return RedirectToAction("BookReturnList");
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public ActionResult BookReturnList()
@@ -40,13 +49,12 @@ namespace MvcLibrarySystem.Controllers
             return View("BookReturnProcess",result);
         }
 
+        [HttpPost]
         public ActionResult BookReturnUpdate(Movement movement)
         {
             movement.ProcessStatus = true;
             movementManager.Update(movement);
-            return View("BookReturnList");
+            return RedirectToAction("BookReturnList");
         }
-
-
     }
 }

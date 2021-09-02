@@ -20,7 +20,8 @@ namespace Business.Concrete
 
         public void Add(Movement movement)
         {
-            _movementDal.Add(movement);
+                movement.ProcessStatus = false;
+                _movementDal.Add(movement);
         }
 
         public void Delete(Movement movement)
@@ -36,6 +37,11 @@ namespace Business.Concrete
         public List<Movement> GetAllProcessFalse()
         {
             return _movementDal.List(x=>x.ProcessStatus == false);
+        }
+
+        public List<Movement> GetAllProcessTrue()
+        {
+            return _movementDal.List(x => x.ProcessStatus == true);
         }
 
         public Movement GetById(int id)

@@ -1,0 +1,36 @@
+﻿@using Entities.Concrete
+@model List<Movement>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>İadesi Alınan Kitap Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>İşlem Id</th>
+        <th>Kitap Adı</th>
+        <th>Üye</th>
+        <th>Personel</th>
+        <th>Veriliş Tarihi</th>
+        <th>İade Tarihi</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MovementId</td>
+            <td>@item.Book.BookName</td>
+            <td>@item.User.FirstName @item.User.LastName</td>
+            <td>@item.Employee.FirstName @item.Employee.LastName</td>
+            <td>@Convert.ToDateTime(@item.DateOfIssue).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(@item.UserReturnDate).ToString("dd/MM/yyyy")</td>
+
+        </tr>
+    }
+</table>
+<a href="/Book/BookAdd" class="btn btn-success">Yeni Kitap</a>
+
+
+

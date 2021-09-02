@@ -12,6 +12,8 @@ namespace Business.Abstract
 
         List<Movement> GetAllProcessFalse();
 
+        List<Movement> GetAllProcessTrue();
+
         Movement GetById(int id);
 
         void Add(Movement movement);

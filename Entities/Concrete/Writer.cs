@@ -11,13 +11,18 @@ namespace Entities.Concrete
     {
         [Key]
         public int WriterId { get; set; }
+
+        public ICollection<Book> Books { get; set; }
+
         [StringLength(50)]
+        [Required(ErrorMessage ="Yazar Adını Boş Geçemezsiniz")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage = "Yazar Soyadını Boş Geçemezsiniz")]
         [StringLength(50)]
         public string LastName { get; set; }
 
 
-        public ICollection<Book> Books { get; set; }
+
     }
 }
 

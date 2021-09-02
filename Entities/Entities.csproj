@@ -57,6 +57,7 @@
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Concrete\Book.cs" />
     <Compile Include="Concrete\Category.cs" />
+    <Compile Include="Concrete\Contact.cs" />
     <Compile Include="Concrete\Earning.cs" />
     <Compile Include="Concrete\Employee.cs" />
     <Compile Include="Concrete\Movement.cs" />

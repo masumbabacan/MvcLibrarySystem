@@ -28,6 +28,10 @@ namespace MvcLibrarySystem.Controllers
         [HttpPost]
         public ActionResult WriterAdd(Writer writer)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("WriterAdd");
+            }
             writerManager.Add(writer);
             return RedirectToAction("Index");
         }

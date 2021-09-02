@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Abstract\IBookDal.cs" />
     <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IEarningDal.cs" />
     <Compile Include="Abstract\IEmployeeDal.cs" />
     <Compile Include="Abstract\IMovementDal.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Abstract\Repository\IRepository.cs" />
     <Compile Include="Concrete\EfBookDal.cs" />
     <Compile Include="Concrete\EfCategoryDal.cs" />
+    <Compile Include="Concrete\EfContactDal.cs" />
     <Compile Include="Concrete\EfEarningDal.cs" />
     <Compile Include="Concrete\EfEmployeeDal.cs" />
     <Compile Include="Concrete\EfMovementDal.cs" />
@@ -85,6 +87,26 @@
     <Compile Include="Migrations\202108201158143_aaaaa.cs" />
     <Compile Include="Migrations\202108201158143_aaaaa.designer.cs">
       <DependentUpon>202108201158143_aaaaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109010923466_bookimage.cs" />
+    <Compile Include="Migrations\202109010923466_bookimage.designer.cs">
+      <DependentUpon>202109010923466_bookimage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109012122095_contactAdd.cs" />
+    <Compile Include="Migrations\202109012122095_contactAdd.designer.cs">
+      <DependentUpon>202109012122095_contactAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109012129120_contactAdd1.cs" />
+    <Compile Include="Migrations\202109012129120_contactAdd1.designer.cs">
+      <DependentUpon>202109012129120_contactAdd1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109012137556_contactAdd2.cs" />
+    <Compile Include="Migrations\202109012137556_contactAdd2.designer.cs">
+      <DependentUpon>202109012137556_contactAdd2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109020948086_writerrequired.cs" />
+    <Compile Include="Migrations\202109020948086_writerrequired.designer.cs">
+      <DependentUpon>202109020948086_writerrequired.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +133,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108201158143_aaaaa.resx">
       <DependentUpon>202108201158143_aaaaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109010923466_bookimage.resx">
+      <DependentUpon>202109010923466_bookimage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109012122095_contactAdd.resx">
+      <DependentUpon>202109012122095_contactAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109012129120_contactAdd1.resx">
+      <DependentUpon>202109012129120_contactAdd1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109012137556_contactAdd2.resx">
+      <DependentUpon>202109012137556_contactAdd2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109020948086_writerrequired.resx">
+      <DependentUpon>202109020948086_writerrequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

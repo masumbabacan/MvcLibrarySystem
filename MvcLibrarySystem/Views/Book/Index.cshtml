@@ -31,30 +31,43 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.BookId</td>
-            <td>@item.BookName</td>
-            <td>@item.Writer.FirstName @item.Writer.LastName</td>
-            <td>@item.Category.CategoryName</td>
-            <td>@item.PrintingYear</td>
-            <td>@item.Publisher</td>
-            <td>@item.NumberPage</td>
-            @if (item.Status == true)
-            {
-                <td>Mevcut</td>
-            }
-            else
-            {
-                <td>Yok</td>
-            }
-            <td>
-                <a href="/Book/BookDelete/@item.BookId" class="btn btn-danger">Sil</a>
-            </td>
-            <td>
-                <a href="/Book/BookBring/@item.BookId" class="btn btn-primary">Güncelle</a>
-            </td>
+<tr>
+    <td>@item.BookId</td>
+    <td>@item.BookName</td>
+    <td>@item.Writer.FirstName @item.Writer.LastName</td>
+    <td>@item.Category.CategoryName</td>
+    <td>@item.PrintingYear</td>
+    <td>@item.Publisher</td>
+    <td>@item.NumberPage</td>
+    @if (item.Status == true)
+    {
+        <td>Mevcut</td>
+    }
+    else
+    {
+        <td>Yok</td>
+    }
+    <td>
+        <a href="/Book/BookDelete/@item.BookId" class="btn btn-danger">Sil</a>
+    </td>
+    <td>
+        <a href="/Book/BookBring/@item.BookId" class="btn btn-primary">Güncelle</a>
+    </td>
+    @if (item.Status == false)
+    {
+        <td>
+            <a href="#" class="btn btn-danger">Ödünç Ver</a>
+        </td>
+    }
+    else
+    {
+        <td>
+            <a href="/OnLoan/Lend/@item.BookId" class="btn btn-primary">Ödünç Ver</a>
+        </td>
+    }
 
-        </tr>
+
+</tr>
     }
 </table>
 <a href="/Book/BookAdd" class="btn btn-danger">Yeni Kitap</a>

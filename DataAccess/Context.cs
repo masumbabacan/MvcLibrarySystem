@@ -18,5 +18,7 @@ namespace DataAccess
         public DbSet<Penalty> Penalties { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Writer> Writers { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+
     }
 }
