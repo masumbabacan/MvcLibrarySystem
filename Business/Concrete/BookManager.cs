@@ -34,6 +34,11 @@ namespace Business.Concrete
             return _bookDal.GetAll();
         }
 
+        public List<Book> GetAllDepositBook()
+        {
+            return _bookDal.List(x => x.Status == false);
+        }
+
         public Book GetById(int id)
         {
             return _bookDal.Get(x => x.BookId == id);

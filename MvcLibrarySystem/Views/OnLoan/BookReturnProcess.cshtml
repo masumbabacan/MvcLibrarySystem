@@ -27,6 +27,10 @@
     <br />
     <label>Üyenin verdiği tarih</label>
     <input type="text" class="form-control" name="UserReturnDate" value="@DateTime.Now.ToShortDateString()" />
+    <br />
+    <label>Geç Gelen Gün Sayısı</label>
+    <input type="text" class="form-control" id="gecinput" value="@ViewBag.gecGelenGunSayisi" />
+
 </div>
     <div><button class="btn btn-warning">Ödünç Kitabı Al</button></div>
 }

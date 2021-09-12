@@ -14,7 +14,8 @@
         <th>Üye</th>
         <th>Personel</th>
         <th>Veriliş Tarihi</th>
-        <th>İade Tarihi</th>
+        <th>İade Edilmesi Gereken Tarih</th>
+        <th>Üyenin getirdiği tarih</th>
 
     </tr>
     @foreach (var item in Model)
@@ -25,6 +26,7 @@
             <td>@item.User.FirstName @item.User.LastName</td>
             <td>@item.Employee.FirstName @item.Employee.LastName</td>
             <td>@Convert.ToDateTime(@item.DateOfIssue).ToString("dd/MM/yyyy")</td>
+            <td>@Convert.ToDateTime(@item.ReturnDate).ToString("dd/MM/yyyy")</td>
             <td>@Convert.ToDateTime(@item.UserReturnDate).ToString("dd/MM/yyyy")</td>
 
         </tr>

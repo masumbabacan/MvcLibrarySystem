@@ -45,7 +45,15 @@
             <i class="dollar"></i>
         </div>
         <div class="icon-text">
-            <h3>15896</h3>
+            @if (@ViewBag.cashAmount < 0)
+            {
+                <h3> 0 </h3>
+            }else
+            {
+            <h3>@ViewBag.cashAmount</h3>
+            }
+
+
             <p>Kasadaki Tutar</p>
         </div>
         <div class="clearfix"></div>
@@ -55,7 +63,7 @@
             <i class="user1"></i>
         </div>
         <div class="icon-text">
-            <h3>5356</h3>
+            <h3>@ViewBag.usrCount</h3>
             <p>Üye Sayısı</p>
         </div>
         <div class="clearfix"></div>
@@ -65,7 +73,7 @@
             <i class="order"></i>
         </div>
         <div class="icon-text">
-            <h3>26856</h3>
+            <h3>@ViewBag.bookCount</h3>
             <p>Kitap Sayısı</p>
         </div>
         <div class="clearfix"></div>
@@ -75,7 +83,7 @@
             <i class="visit"></i>
         </div>
         <div class="icon-text">
-            <h3>85</h3>
+            <h3>@ViewBag.depositBookCount</h3>
             <p>Emanet Kitaplar</p>
         </div>
         <div class="clearfix"></div>

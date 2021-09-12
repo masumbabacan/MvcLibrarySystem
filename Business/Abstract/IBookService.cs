@@ -11,6 +11,8 @@ namespace Business.Abstract
     {
         List<Book> GetAll();
 
+        List<Book> GetAllDepositBook();
+
         Book GetById(int id);
 
         void Add(Book book);

@@ -43,11 +43,20 @@ namespace MvcLibrarySystem.Controllers
             return View(result);
         }
 
+
+
         public ActionResult BookReturnProcess(int id)
         {
             var result = movementManager.GetById(id);
-            return View("BookReturnProcess",result);
+            DateTime verilmesiGerekenTarih = DateTime.Parse(result.ReturnDate.ToString());
+            DateTime verilenTarih = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            TimeSpan fark = verilenTarih - verilmesiGerekenTarih;
+            ViewBag.gecGelenGunSayisi = fark.TotalDays;
+            return View("BookReturnProcess", result);
         }
+
+
+
 
         [HttpPost]
         public ActionResult BookReturnUpdate(Movement movement)
