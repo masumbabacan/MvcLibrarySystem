@@ -57,80 +57,82 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="register-right">
                 <div class="register-in">
                     <h2><span class="fa fa-pencil"></span> Kayıt Olun</h2>
-                    <div class="register-form">
-                        <form action="#" method="post">
-                            <div class="fields-grid">
-                                <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="FirstName" required="">
-                                    <label>İsminiz</label>
-                                    <span></span>
-                                </div>
-                                <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="LastName" required="">
-                                    <label>Soyisminiz</label>
-                                    <span></span>
-                                </div>
-                                <div class="styled-input">
-                                    <input type="tel" name="PhoneNumber" required="">
-                                    <label>Telefon Numaranız</label>
-                                    <span></span>
-                                </div>
-                                <div class="styled-input">
-                                    <input type="email" name="Email" required="">
-                                    <label>Bir de E-Postanız..</label>
-                                    <span></span>
-                                </div>
+                    @using (Html.BeginForm("SignUp", "Login", FormMethod.Post))
+                    {
+                        <div class="register-form">
+                            <form action="#" method="post">
+                                <div class="fields-grid">
+                                    <div class="styled-input agile-styled-input-top">
+                                        <input type="text" name="FirstName" required="">
+                                        <label>İsminiz</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="styled-input agile-styled-input-top">
+                                        <input type="text" name="LastName" required="">
+                                        <label>Soyisminiz</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="styled-input">
+                                        <input type="tel" name="PhoneNumber" required="">
+                                        <label>Telefon Numaranız</label>
+                                        <span></span>
+                                    </div>
+                                    <div class="styled-input">
+                                        <input type="email" name="Email" required="">
+                                        <label>Bir de E-Postanız..</label>
+                                        <span></span>
+                                    </div>
 
-                                <div class="styled-input">
-                                    <input type="password" name="Password" required="">
-                                    <label>Şifreniz</label>
-                                    <span></span>
+                                    <div class="styled-input">
+                                        <input type="password" name="Password" required="">
+                                        <label>Şifreniz</label>
+                                        <span></span>
+                                    </div>
+
+                                    <div class="styled-input">
+                                        <input type="text" name="School" required="">
+                                        <label>Okulunuz*</label>
+                                        <span></span>
+                                    </div>
+                                    <div  style="margin-left:0%">
+                                        <button style="width: 90%; background-color: #FF4F81;" type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
+                                    </div>
+                                    @*açılır kutulu menü*@
+                                    <div class="styled-input agile-styled-input-top">
+                                        @* <select id="category2" required="" name="School">
+                                                <option value="">Okulunuz*</option>
+                                                <option value="">Ankara Üniversitesi </option>
+                                                <option value="">Fırat Üniversitesi</option>
+                                                <option value="">Balıkesir Üniversitesi</option>
+                                                <option value="">Denizli Üniversitesi</option>
+                                                <option value="">Bnadırma Üniversitesi</option>
+                                                <option value="">9 Eylül Üniversitesi</option>
+                                                <option value="">Tokat Üniversitesi</option>
+                                                <option value="">Başkent Üniversitesi</option>
+                                                <option value="">Kıbrıs Üniversitesi</option>
+                                                <option value="">Part time</option>
+                                                <option value="">Higher degree</option>
+                                                <option value="">Graduate</option>
+                                                <option value="">Pg</option>
+                                                <option value="">Degree</option>
+                                                <option value="">Okulunuz*</option>
+                                                <option value="">Diploma</option>
+                                                <option value="">Full time</option>
+                                                <option value="">Part time</option>
+                                                <option value="">Higher degree</option>
+                                                <option value="">Graduate</option>
+                                                <option value="">Pg</option>
+                                                <option value="">Degree</option>
+                                            </select>
+                                            <span></span>
+                                        *@
+                                    </div>
+                                    <div class="clear"> </div>
+                                    <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Koşulları Okudum <a href="#">Ve Onaylıyorum</a></label>
                                 </div>
-
-                                <div class="styled-input">
-                                    <input type="text" name="School" required="">
-                                    <label>Okulunuz*</label>
-                                    <span></span>
-                                </div>
-
-                                <a class="btn btn-danger" href="/Login/SignIn">Kayıt Ol</a>
-
-                                @*açılır kutulu menü*@
-                                <div class="styled-input agile-styled-input-top">
-                                    @* <select id="category2" required="" name="School">
-                <option value="">Okulunuz*</option>
-                <option value="">Ankara Üniversitesi </option>
-                <option value="">Fırat Üniversitesi</option>
-                <option value="">Balıkesir Üniversitesi</option>
-                <option value="">Denizli Üniversitesi</option>
-                <option value="">Bnadırma Üniversitesi</option>
-                <option value="">9 Eylül Üniversitesi</option>
-                <option value="">Tokat Üniversitesi</option>
-                <option value="">Başkent Üniversitesi</option>
-                <option value="">Kıbrıs Üniversitesi</option>
-                <option value="">Part time</option>
-                <option value="">Higher degree</option>
-                <option value="">Graduate</option>
-                <option value="">Pg</option>
-                <option value="">Degree</option>
-                <option value="">Okulunuz*</option>
-                <option value="">Diploma</option>
-                <option value="">Full time</option>
-                <option value="">Part time</option>
-                <option value="">Higher degree</option>
-                <option value="">Graduate</option>
-                <option value="">Pg</option>
-                <option value="">Degree</option>
-            </select>
-            <span></span>
-                                    *@
-                                </div>
-                                <div class="clear"> </div>
-                                <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>Koşulları Okudum <a href="#">Ve Onaylıyorum</a></label>
-                            </div>
-
-                        </form>
-                    </div>
+                            </form>
+                        </div>
+                    }
                 </div>
                 <div class="clear"> </div>
             </div>

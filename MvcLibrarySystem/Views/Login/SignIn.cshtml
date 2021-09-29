@@ -38,28 +38,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <h1>Erbaa Şehir Kütüphanesi</h1>
     <div class=" w3l-login-form">
         <h2>Giriş Yap</h2>
-        <form action="#" method="POST">
 
-            <div class=" w3l-form-group">
-                <label>E-Posta:</label>
-                <div class="group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="örnek123@gmail.com" required="required" />
+        @using (Html.BeginForm("SignIn", "Login", FormMethod.Post))
+        {
+            <form>
+                <div class=" w3l-form-group">
+                    <label>E-Posta:</label>
+                    <div class="group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" class="form-control" placeholder="örnek123@gmail.com" required="required" name="Email" />
+                    </div>
                 </div>
-            </div>
-            <div class=" w3l-form-group">
-                <label>Şifre:</label>
-                <div class="group">
-                    <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="örnek123." required="required" />
+                <div class=" w3l-form-group">
+                    <label>Şifre:</label>
+                    <div class="group">
+                        <i class="fas fa-unlock"></i>
+                        <input type="password" class="form-control" placeholder="örnek123." required="required" name="Password" />
+                    </div>
                 </div>
-            </div>
-            <div class="forgot">
-                <a href="#">Şifremi unuttum?</a>
-                <p><input type="checkbox">Beni Hatırla</p>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+                <div class="forgot">
+                    <a href="#">Şifremi unuttum?</a>
+                    <p><input type="checkbox">Beni Hatırla</p>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        }
         <p class=" w3l-register-p">Bir Hesabın Yok mu?<a href="/Login/SignUp" class="register"> Kayıt Ol!</a></p>
     </div>
     <footer>

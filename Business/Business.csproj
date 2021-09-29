@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAuthService.cs" />
     <Compile Include="Abstract\IBookService.cs" />
     <Compile Include="Abstract\ICategoryService.cs" />
     <Compile Include="Abstract\IContactService.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Abstract\IWriterService.cs" />
     <Compile Include="Business\BusinessRules.cs" />
+    <Compile Include="Concrete\AuthManager.cs" />
     <Compile Include="Concrete\BookManager.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\ContactManager.cs" />

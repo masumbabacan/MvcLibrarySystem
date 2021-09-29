@@ -140,6 +140,7 @@
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OnLoanController.cs" />
+    <Compile Include="Controllers\PanelController.cs" />
     <Compile Include="Controllers\ProcessController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -161,6 +162,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="startbootstrap-simple-sidebar-gh-pages\assets\favicon.ico" />
+    <Content Include="startbootstrap-simple-sidebar-gh-pages\css\styles.css" />
+    <Content Include="startbootstrap-simple-sidebar-gh-pages\index.html" />
+    <Content Include="startbootstrap-simple-sidebar-gh-pages\js\scripts.js" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\clndr.css" />
     <Content Include="web2\css\jqvmap.css" />
@@ -462,6 +467,8 @@
     <Content Include="weblogin\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Login\SignIn.cshtml" />
     <Content Include="Views\Login\SignUp.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanel.cshtml" />
+    <Content Include="Views\Panel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
